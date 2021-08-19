@@ -1,0 +1,131 @@
+img{ 
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+}
+.college{
+    height: 100%;
+    transition: all 500ms ease-in-out;
+    z-index: 20%;
+    
+}
+.gallery{
+    width: 85%;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 133px);
+    grid-auto-rows: 220px;
+    justify-content: center; /* CENTRAR EL CONTENIDO PARA TENER EL MISMO ESPACIO RESTANTE EN AMBOS LADOS */
+    gap: 1rem;
+}
+.gallery_item{
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    grid-column: span 2;
+    height: 283px;
+    transition: all .4s ease-in-out;
+    position: relative;
+}
+
+.capa{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: violet; */
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    /* color: white; */
+}
+
+div:hover > .capa{
+    opacity: 1;
+    visibility: visible;
+    z-index: 115%;
+    
+}
+
+div:hover > .capa h3{
+    margin-top: 125px;
+    margin-bottom: 15px;
+    color: rgb(255, 255, 255);
+    font-weight: bold
+    
+}
+
+div .capa h3{
+    /* color: rgb(255, 0, 0); */
+    font-weight: 400;
+    margin-bottom: 120px;
+    transition: all 500ms ease-in-out;
+    margin-top: 30px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-weight: bold
+
+}
+
+.gallery_item:hover{
+    filter: grayscale(0);
+  transform: rotate(10deg);
+  /* filter: rgb(0, 0, 0); */
+
+}
+.gallery_item:first-of-type{
+    grid-column: 2 / span 2;
+}
+
+@media screen and (min-width: 270px) and (max-width: 504px) { /*AQUI QUE EN ESE TAMAÑO DE PANTALLA TODOS ESTEN EN UNA SOLA FILA */
+    
+    .gallery_item:first-of-type{
+        grid-column: 1 / span 2;
+    }
+
+    .gallery{
+        grid-auto-rows: 283px;
+    }
+}
+
+@media screen and (min-width: 505px) and (max-width: 685px) { /*AQUI PARA QUE LOS IMPARES INICIEN EN EL NUMERO 2 Y SE ACOMODEN */
+    
+    .gallery_item:nth-of-type(odd){
+        grid-column: 2 / span 2;
+    }
+}
+
+@media screen and (min-width: 686px) and (max-width:857px) { /*AQUI al tercer elemento se le aplica la regla */
+    
+    .gallery_item:nth-of-type(3n + 1){
+        grid-column: 2 / span 2;
+    }
+}
+
+@media screen and (min-width: 858px) and (max-width:1032px) { /*AQUI al tercer elemento se le aplica la regla */
+    
+    .gallery_item:nth-of-type(4n + 1){
+        grid-column: 2 / span 2;
+    }
+}
+
+@media screen and (min-width: 1033px) and (max-width:1165px) { /*AQUI al tercer elemento se le aplica la regla */
+    
+    .gallery_item:nth-of-type(5n + 1){
+        grid-column: 2 / span 2;
+    }
+}
+@media screen and (min-width: 1166px) and (max-width:1334px) { /*AQUI al tercer elemento se le aplica la regla */
+    
+    .gallery_item:nth-of-type(6n + 1){
+        grid-column: 2 / span 2;
+    }
+}
+
+@media screen and (min-width: 1335px) and (max-width:1502px) { /*AQUI al tercer elemento se le aplica la regla */
+    
+    .gallery_item:nth-of-type(7n + 1){
+        grid-column: 2 / span 2;
+    }
+}

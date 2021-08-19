@@ -1,0 +1,35 @@
+*****  LOGIN   *******
+
+Resources/layouts/Form.blade.php
+Resources/password/login.blade.php
+
+*****  REGISTRO USUARIO *******
+Resources/password/register.blade.php
+
+*****  PAGINA PRINCIPAL DESPUES DEL LOGIN *******
+
+Resources/layouts/panel.blade.php
+
+
+*****  BARRA IZQUIERDA DEL PANEL *******
+
+Resources/views/includes/panel/menu.blade.php
+
+*****  MENU DERECHA SUPERIOR DEL USUARIO *******
+
+Resources/views/includes/panel/dropdown_menu.blade.php  
+Resources/views/includes/panel/panel.blade.php 
+
+*****  FOOTER DEL SISTEMA DE CITAS *******
+
+Resources/views/includes/panel/footer.blade.php
+
+
+*****  TIPO DE MASAJES (specialties/specialty)*******
+
+Resources/views/specialties/index.blade.php -> La lista de los MASAJES
+Resources/views/specialties/create.blade.php -> Agregar los diferentes tipos de masajes
+
+
+*****  FUNCIONES PARA INGRESAR, ELIMINAR, ACTUALIZAR MASAJES *******
+App/HTTP/Controllers/SpecialtyController.php
