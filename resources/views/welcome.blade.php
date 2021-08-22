@@ -6,6 +6,7 @@
 
         <title>Laravel</title>
 
+
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -130,3 +131,4 @@
         </div>
     </body>
 </html>
+        <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>

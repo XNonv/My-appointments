@@ -7,11 +7,11 @@
     <div class="card-header border-0">
         <div class="row align-items-center">
             <div class="col">
-                <h3 class="mb-0">Listado de Masajistas</h3>
+                <h3 class="mb-0">Listado de Clientes</h3>
             </div>
             <div class="col text-right">
-                <a href="{{ url ('masajistas/create')}}" class="btn btn-sm btn-success">             
-                Nuevo Masajista
+                <a href="{{ url ('clientes/create')}}" class="btn btn-sm btn-success">             
+                Nuevo Cliente
                 </a>
             </div>
         </div>
@@ -38,23 +38,23 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($masajistas as $masajista)
+                @foreach ($clientes as $cliente)
                 <tr>
                     <th scope="row">
-                        {{$masajista->name}}
+                        {{$cliente->name}}
                     </th>
                     <td>
-                        {{$masajista->email}}
+                        {{$cliente->email}}
                     </td>
                     <td>
-                        {{$masajista->phone}}
+                        {{$cliente->phone}}
                     </td>
                     <td>
                        
-                        <form action="{{ url('/masajistas/'.$masajista->id)}}" method="POST">
+                        <form action="{{ url('/clientes/'.$cliente->id)}}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <a href="{{ url('/masajistas/'.$masajista->id.'/edit')}}" class="btn btn-sm btn-primary">Editar</a>
+                            <a href="{{ url('/clientes/'.$cliente->id.'/edit')}}" class="btn btn-sm btn-primary">Editar</a>
                             <button class="btn btn-sm btn-danger" type="submit">Eliminar</button>
                         </form>
                     </td>
@@ -63,5 +63,11 @@
             </tbody>
         </table>
     </div>
+    <div class="card-body">
+        {{$clientes->links()}} {{-- Laravel genera el HTML correspondientes para las paginas --}}
+    </div>
+    
 </div>
 @endsection
+
+

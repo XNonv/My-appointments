@@ -29,6 +29,9 @@ Resources/views/includes/panel/footer.blade.php
 
 Resources/views/specialties/index.blade.php -> La lista de los MASAJES
 Resources/views/specialties/create.blade.php -> Agregar los diferentes tipos de masajes
+Resources/views/specialties/edit.blade.php -> Actualizar masajes
+
+para eliminar un masaje solo estaq declarada la funcion en SpecialtyController.php y colocando la funcion en el boton eliminar
 
 
 *****  FUNCIONES PARA INGRESAR, ELIMINAR, ACTUALIZAR MASAJES *******

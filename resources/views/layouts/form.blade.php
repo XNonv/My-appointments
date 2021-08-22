@@ -25,7 +25,7 @@
     <nav class="navbar navbar-top navbar-horizontal navbar-expand-md navbar-dark">
       <div class="container px-4">
         <a class="navbar-brand " href="https://asciaspa.netlify.app">
-          <img src="{{ asset('img/brand/logo-150.png') }}" />
+          <img src="{{ asset('img/brand/logo-150.png') }}" >
           
         </a>
         <h1 style="color:white;">Ascia Spa</h1>
